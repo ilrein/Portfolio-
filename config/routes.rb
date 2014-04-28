@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'pages#about_me' 
   get 'pages/about_me', :path => "about_me"
 
   get 'pages/my_work', :path => "my_work"
