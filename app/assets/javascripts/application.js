@@ -117,23 +117,5 @@ $(document).ready(function(){
 				tween1.restart();
 			}
 		});
-			
-		// buttons
-
-		playBtn.on('click', function(){
-			tween2.play();
-		});
-
-		pauseBtn.on('click', function(){
-			tween2.pause();
-		});
-
-		resumeBtn.on('click', function(){
-			tween2.resume();
-		});
-
-		reverseBtn.on('click', function(){
-			tween2.reverse();
-		});
 		
 	});
