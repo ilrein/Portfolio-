@@ -1,6 +1,7 @@
-#boo {
+#boo1 {
 	height:200px;
 	width:200px;
+	
 	position:absolute;
 	background:
 	url('booy.png') no-repeat center;
@@ -25,6 +26,14 @@
 }
 
 #boo3 {
+	height:200px;
+	width:200px;
+	position:relative;
+	background:
+	url('booy.png') no-repeat center;
+}
+
+#boo4 {
 	height:200px;
 	width:200px;
 	position:relative;
