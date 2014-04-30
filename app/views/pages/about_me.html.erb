@@ -1,6 +1,7 @@
-<div id="ball"></div>
+<%= image_tag('boo.png', id: 'boo') %>
 <script>
-	$(document).ready(function(){
-		
-	});
+	window.onload = function(){
+		var boo = document.getElementById("boo");
+		TweenLite.to(boo, 1, {left:"632px"});
+	}
 </script>
