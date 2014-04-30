@@ -36,9 +36,10 @@ $(document).ready(function(){
 			left:"3000px"
 		});
 
-		tween2 = TweenLite.to(boo2, 9, {
+		tween2 = TweenMax.to(boo2, 9, {
 			left:"-200px",
 			opacity:0,
+			repeat:-1,
 			ease:SlowMo.ease.config(0.3, 0.6, true)
 		});
 
