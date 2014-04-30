@@ -18,7 +18,7 @@
 $(document).ready(function(){
 
 	//instanstiated variables/objects
-	var tl = new TimelineLite({paused:true});
+	
 	var boo1 = $("#boo1");
 	var boo2 = $("#boo2");
 	$('#boo3').hide();
@@ -31,7 +31,11 @@ $(document).ready(function(){
 	var paused = false;
 
 		// basic onload animations
-		
+
+		title_tween = TweenMax.staggerTo([s1, s2, s3], 1, {
+			scale:0.2, opacity:0.3}, 0.5
+		);
+
 		tween1 = TweenLite.to(boo1, 100, {
 			left:"3000px"
 		});

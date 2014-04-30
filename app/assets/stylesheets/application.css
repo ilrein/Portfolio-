@@ -5,6 +5,16 @@ html, body {
 
 body {
 	overflow: hidden;
+	background-image: url("bg.png") no-repeat center center fixed;
+}
+
+#bg {
+	z-index: -2;
+	position: fixed;
+	top:0;
+	left:0;
+	min-height: 100%;
+	min-width: 100%;
 }
 
 .container {
@@ -16,6 +26,7 @@ body {
 .draft {
 	width:100%;
 	height:100%;
+	z-index: 2;
 	/*overflow: hidden;*/
 }
 
@@ -36,11 +47,11 @@ body {
 	url('booy.png') no-repeat center;
 
 	-moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH";
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
 
 }
 
@@ -61,18 +72,31 @@ body {
 	url('booy.png') no-repeat center;
 }
 .words {
-	height: 300px;
-	width: 300px;
+	height: 10px;
+	width: 350px;
 	right: 500px;
-	top: 100px;
+	top: 20px;
 	position:absolute;
+	text-align: center;
+	z-index: -1;
+	font-family: 'Gochi Hand', cursive;
+	font-size: 400%;
+
 }
 
-.footer {
-	position:absolute;
-	width:100%;
-	bottom:0;
-	height:50px;
-	background-color: #54db59;
-	border-radius: 10%;
+#s1, #s2, #s3 {
+	position: relative;
 }
+
+/*#s2, #s3 {
+	position: relative;
+	}*/
+
+	.footer {
+		position:absolute;
+		width:100%;
+		bottom:0;
+		height:50px;
+		background-color: #54db59;
+		border-radius: 10%;
+	}
