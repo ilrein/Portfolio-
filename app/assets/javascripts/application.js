@@ -32,9 +32,15 @@ $(document).ready(function(){
 
 		// basic onload animations
 
-		title_tween = TweenMax.staggerTo([s1, s2, s3], 1, {
-			scale:0.2, opacity:0.3}, 0.5
-		);
+		// title_tween = TweenMax.staggerTo([s1, s2, s3], 1, {
+		// 	scale:0.2, opacity:0.3}, 0.5
+		// );
+		TweenMax.to(s1, 3, {
+			scale:1.2,
+			opacity:2,
+			repeat:-1,
+			ease: SlowMo.ease.config(0.3, 0.6, true)
+		});
 
 		tween1 = TweenLite.to(boo1, 100, {
 			left:"3000px"
