@@ -16,23 +16,31 @@
 //= require_tree .
 
 $(document).ready(function(){
+
+	//instanstiated variables/objects
+	
 	var boo = $("#boo");
 	var boo2 = $("#boo2");
 	$('#boo3').hide();
+	
+	var playBtn = $('#playBtn');
+	var pauseBtn = $("#pauseBtn");
+	var resumeBtn = $('#resumeBtn');
+	var reverseBtn = $('#reverseBtn');
 
 		// basic onload animations
 		
-		TweenLite.to(boo, 100, {
+		 TweenLite.to(boo, 100, {
 			left:"3000px"
 		});
 
-		TweenLite.to(boo2, 9, {
+		tween2 = TweenLite.to(boo2, 9, {
 			left:"-200px",
 			opacity:0,
 			ease:SlowMo.ease.config(0.3, 0.6, true)
 		});
 
-		TweenLite.to(boo3, 110, {
+		 TweenLite.to(boo3, 110, {
 			left:"5000px"
 		});
 
@@ -45,14 +53,16 @@ $(document).ready(function(){
 				top:'+=40px', 
 				ease:Strong.easeOut
 			});
+			$('#boo').fadeOut("slow");
 		});
 
 		$('#boo3').click(function(){
-			$('#boo').fadeOut("slow");
+			$('#boo').fadeIn("slow");
 			TweenLite.to(boo3, 1.6,{
 				top:'-=40px', 
 				ease:Strong.easeOut
 			});
+			$('#boo3').fadeOut("slow");
 		});
 
 		$('#boo2').click(function(){
@@ -68,5 +78,20 @@ $(document).ready(function(){
 			});
 		});
 
+		playBtn.on('click', function(){
+			tween2.play();
+		});
+
+		pauseBtn.on('click', function(){
+			tween2.pause();
+		});
+
+		resumeBtn.on('click', function(){
+			tween2.resume();
+		});
+
+		reverseBtn.on('click', function(){
+			tween2.reverse();
+		});
 		
 	});
