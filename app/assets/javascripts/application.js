@@ -35,7 +35,7 @@ $(document).ready(function(){
 		});
 
 		TweenLite.to(hills, 0.1, {
-			opacity:0.5
+			opacity:0
 		});
 
 		//chain the animations!
@@ -48,9 +48,9 @@ $(document).ready(function(){
 		}
 
 		function initHills() {
-			TweenLite.to(hills, 1.5, {
+			TweenLite.to(hills, 2, {
 				opacity:1,
-				right:"5px",
+				left:"50px",
 				ease: Elastic.easeIn
 				//onComplete:initHills
 			});
