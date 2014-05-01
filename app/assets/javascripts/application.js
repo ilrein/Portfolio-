@@ -28,6 +28,7 @@ $(document).ready(function(){
 	var boxes = $('#question_boxes');
 	var boxes2 = $('#question_boxes2');
 	var blocks = $('#blocks');
+	var clouds = $('#clouds');
 	var paused = false;
 	var clouds_spun = false;
 
@@ -135,6 +136,9 @@ $(document).ready(function(){
 				opacity:1
 			});
 		}
+		// function refresh() {
+		// 	clouds.restart(0);
+		// }
 
 		TweenMax.to(s1, 3, {
 			scale:1.2,
@@ -173,14 +177,19 @@ $(document).ready(function(){
 		});
 
 		$('#clouds').on('click', function(){
-			TweenLite.to(clouds, 2, {
-				rotation:360
-			});
-//			clouds_spun = true;
+			var selected = $(this);
+			rotate(selected);
 		});
 
+		function rotate(selected){
+			TweenLite.to(selected, 2, {
+				rotation:360
+			});
+		}
+
 		$('#cloud').on('click', function(){
-			$('#cloud').slideDown('slow', function (){
+			$('#cloud').animate({
+				left:"+=50"
 			});
 		});
 
@@ -233,6 +242,7 @@ $(document).ready(function(){
 		$(document).keypress(function(event){
 			if (event.which == 114) {
 				tween1.restart();
+				clouds.restart();
 			}
 		});
 		
