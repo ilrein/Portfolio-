@@ -27,6 +27,7 @@ $(document).ready(function(){
 	var hills = $('#smiley_hills');
 	var boxes = $('#question_boxes');
 	var boxes2 = $('#question_boxes2');
+	var blocks = $('#blocks');
 	var paused = false;
 
 		// hide all the images
@@ -46,6 +47,10 @@ $(document).ready(function(){
 
 		TweenLite.to(boxes2, 0.1, {
 			opacity:0
+		});
+
+		TweenLite.to(blocks, 0.1, {
+			opacity:0.1
 		});
 
 		//chain the animations!
@@ -71,22 +76,39 @@ $(document).ready(function(){
 				opacity:2,
 				left:"50px",
 				ease: Bounce.easeIn,
-				onComplete:keepBoxes
+				onComplete:keepBoxes1
 			});
 
-			TweenLite.from(boxes2, 3, {
+			TweenLite.from(boxes2, 2.4, {
 				opacity:2,
 				top:"-=300px",
 				ease: Back.easeOut,
-				onComplete:keepBoxes
+				onComplete:keepBoxes2
 			});
 		}
 
-		function keepBoxes() {
-			TweenLite.to(boxes, 0.1, {
+		function keepBoxes1() {
+			TweenLite.to(boxes, 2.1, {
+				opacity:1,
+				onComplete:initBlocks
+			});
+		}
+		function keepBoxes2() {
+			TweenLite.to(boxes2, 1, {
 				opacity:1
 			});
-			TweenLite.to(boxes2, 0.1, {
+		}
+
+		function initBlocks() {
+			TweenLite.from(blocks, 1, {
+				opacity:1,
+				left:"+=100px",
+				ease: Bounce,
+				onComplete:keepBlocks
+			});
+		}
+		function keepBlocks() {
+			TweenLite.to(blocks, 1.4, {
 				opacity:1
 			});
 		}

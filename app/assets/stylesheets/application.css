@@ -9,10 +9,10 @@ body {
 }
 
 #wooden_floor {
+	z-index: 2;
 	height:61px;
 	width:100%;
 	bottom:0;
-	/*left:-10px;*/
 	position: absolute;
 	background: url('bg_woodfloor.png') center;
 }
@@ -41,6 +41,15 @@ body {
 	left:680px;
 	position: relative;
 	background: url('question_boxes.gif');
+}
+#blocks {
+	z-index: 1;
+	height:302px;
+	width:271px;
+	bottom:675px;
+	float:right;
+	position: relative;
+	background: url('blocks.gif');
 }
 #bg {
 	z-index: -2;
