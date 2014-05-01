@@ -50,7 +50,7 @@ $(document).ready(function(){
 		});
 
 		TweenLite.to(blocks, 0.1, {
-			opacity:0.1
+			left:"1000px"
 		});
 
 		//chain the animations!
@@ -100,9 +100,8 @@ $(document).ready(function(){
 		}
 
 		function initBlocks() {
-			TweenLite.from(blocks, 1, {
-				opacity:1,
-				left:"+=100px",
+			TweenLite.to(blocks, 1, {
+				left:"-=1000px",
 				ease: Bounce,
 				onComplete:keepBlocks
 			});
@@ -143,6 +142,12 @@ $(document).ready(function(){
 		});
 
 		// click animations
+		$('#boo4').click(function(){
+			TweenLite.to(boo4, 4, {
+				opacity:0.25
+			});
+		});
+
 
 		$('#boo1').click(function(){
 			$('#boo4').fadeIn("slow");
