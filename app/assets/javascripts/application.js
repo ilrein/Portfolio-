@@ -29,6 +29,7 @@ $(document).ready(function(){
 	var boxes2 = $('#question_boxes2');
 	var blocks = $('#blocks');
 	var clouds = $('#clouds');
+	var words = $('.words');
 	var paused = false;
 	var hide = new TimelineLite();
 	var bb = new TimelineLite();
@@ -73,6 +74,10 @@ $(document).ready(function(){
 			onComplete:initFloor
 		});
 
+		hide.to(words, 0.001, {
+			scale:0.01
+		});
+
 		hide.to(hills, 0.1, {
 			opacity:0
 		});
@@ -112,6 +117,15 @@ $(document).ready(function(){
 				left:"50px",
 				ease: Elastic.easeIn,
 				onComplete:initBoxes
+			});
+			TweenLite.from(words, 1.2, {
+				opacity:1,
+				ease: Bounce.easeIn,
+				onComplete:initBoxes
+			});
+			TweenLite.to(words, 1.2, {
+				opacity:1,
+				scale:1
 			});
 		}
 
@@ -196,6 +210,23 @@ $(document).ready(function(){
 		});
 
 		// click animations
+
+		$('#question_boxes').on('click', function(){
+			bb.to(boxes, 1.1, {
+				scale:0.8,
+				opacity:0.5
+			});
+			bb.reverse();
+		});
+
+		$('#question_boxes2').on('click', function(){
+			bb2.to(boxes2, 1.1, {
+				scale:0.8,
+				opacity:0.5,
+				rotation:-360
+			});
+			bb2.reverse();
+		});
 
 		$('#smiley_hills').on('click', function(){
 			bb.to(hills, 2.5, {

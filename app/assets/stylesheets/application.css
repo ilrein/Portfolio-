@@ -40,6 +40,7 @@ body {
 }
 
 #smiley_hills {
+	z-index: 0;
 	height:258px;
 	width:381px;
 	bottom:258px;
@@ -49,8 +50,9 @@ body {
 }
 
 #question_boxes {
+	z-index: 1;
 	height:57px;
-	width:114px;
+	width:57px;
 	bottom:500px;
 	left:500px;
 	position: relative;
