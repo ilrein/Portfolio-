@@ -110,14 +110,15 @@ body {
 	left:450px;
 	background:
 	url('boo.png') no-repeat center;
+}
 
+.flipped {
 	-moz-transform: scaleX(-1);
 	-o-transform: scaleX(-1);
 	-webkit-transform: scaleX(-1);
 	transform: scaleX(-1);
 	filter: FlipH;
 	-ms-filter: "FlipH";
-
 }
 
 #boo3 {
@@ -135,12 +136,6 @@ body {
 	position:absolute;
 	background:
 	url('new_boo_open.png') no-repeat center;
-	-moz-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);
-	filter: FlipH;
-	-ms-filter: "FlipH";
 }
 /*.boo4_invert {
 	height:83px;

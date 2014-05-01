@@ -37,15 +37,25 @@ $(document).ready(function(){
 		//mouse follow
 
 		$(document).on('mousemove', moveBoo);
+		$(document).on('mousemove', mouseSpot);
 
 		function moveBoo(e){
 			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
 			var b4s = boo4.position();
-				//if (b4s)
+				if (b4s.left < e.pageX) {
+					$('.boo4').addClass('flipped');
+				} else {
+					$('.boo4').removeClass('flipped');
+				}
 				//$('.boo4').mouseover(function(){
 					//console.log(b4s);
 			//$('.boo4').css('background', "url('new_boo_closed.png')");
 		//	});
+		}
+
+		function mouseSpot(e) {
+			// var mS = (e.pageX, e.pageY);
+			// console.log(ms);
 		}
 
 		// hide all the images
