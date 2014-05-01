@@ -45,7 +45,7 @@ body {
 	bottom:258px;
 	left:0px;
 	position: relative;
-	background: url('smiley_hills.gif') no-repeat;
+	background: url('smily_hills.png') no-repeat;
 }
 
 #question_boxes {
@@ -54,7 +54,7 @@ body {
 	bottom:500px;
 	left:500px;
 	position: relative;
-	background: url('question_boxes.gif');
+	background: url('questionboxes.png');
 }
 #question_boxes2 {
 	height:57px;
@@ -62,7 +62,7 @@ body {
 	bottom:700px;
 	left:680px;
 	position: relative;
-	background: url('question_boxes.gif');
+	background: url('questionboxes.png');
 }
 #blocks {
 	z-index: 1;
