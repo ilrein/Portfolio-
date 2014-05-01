@@ -31,7 +31,8 @@ $(document).ready(function(){
 	var clouds = $('#clouds');
 	var paused = false;
 	var hide = new TimelineLite();
-	var execute = new TimelineLite();
+	var bb = new TimelineLite();
+	var bb2 = new TimelineLite();
 
 		//mouse follow
 
@@ -176,20 +177,20 @@ $(document).ready(function(){
 			left:"5000px"
 		});
 
-		TweenMax.to(boo4, 1, {
-			// left:"300px",
-			// repeat:-1,
-			// repeatDelay:0.5,
-			// yoyo:true
-		});
-
 		// click animations
 
-		$('#blocks').click(function(){
-			execute.to(blocks, 2.5, {
+		$('#smiley_hills').on('click', function(){
+			bb.to(hills, 2.5, {
 				scale:1.4
 			});
-			execute.reverse();
+			bb.reverse();
+		});
+
+		$('#blocks').on('click', function(){
+			bb2.to(blocks, 2.5, {
+				scale:1.4
+			});
+			bb2.reverse();
 		});
 
 		$('#boo4').click(function(){
