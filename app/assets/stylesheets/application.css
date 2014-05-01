@@ -24,9 +24,24 @@ body {
 	left:0px;
 	position: relative;
 	background: url('smiley_hills.gif') no-repeat;
-
 }
 
+#question_boxes {
+	height:57px;
+	width:114px;
+	bottom:500px;
+	left:500px;
+	position: relative;
+	background: url('question_boxes.gif');
+}
+#question_boxes2 {
+	height:57px;
+	width:114px;
+	bottom:700px;
+	left:680px;
+	position: relative;
+	background: url('question_boxes.gif');
+}
 #bg {
 	z-index: -2;
 	position: fixed;

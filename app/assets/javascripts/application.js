@@ -25,6 +25,8 @@ $(document).ready(function(){
 	$('#boo4').hide();
 	var floor = $('#wooden_floor');
 	var hills = $('#smiley_hills');
+	var boxes = $('#question_boxes');
+	var boxes2 = $('#question_boxes2');
 	var paused = false;
 
 		// hide all the images
@@ -38,6 +40,14 @@ $(document).ready(function(){
 			opacity:0
 		});
 
+		TweenLite.to(boxes, 0.1, {
+			opacity:0
+		});
+
+		TweenLite.to(boxes2, 0.1, {
+			opacity:0
+		});
+
 		//chain the animations!
 
 		function initFloor() {
@@ -48,11 +58,36 @@ $(document).ready(function(){
 		}
 
 		function initHills() {
-			TweenLite.to(hills, 2, {
+			TweenLite.to(hills, 1.2, {
 				opacity:1,
 				left:"50px",
-				ease: Elastic.easeIn
-				//onComplete:initHills
+				ease: Elastic.easeIn,
+				onComplete:initBoxes
+			});
+		}
+
+		function initBoxes() {
+			TweenLite.from(boxes, 2, {
+				opacity:2,
+				left:"50px",
+				ease: Bounce.easeIn,
+				onComplete:keepBoxes
+			});
+
+			TweenLite.from(boxes2, 3, {
+				opacity:2,
+				top:"-=300px",
+				ease: Back.easeOut,
+				onComplete:keepBoxes
+			});
+		}
+
+		function keepBoxes() {
+			TweenLite.to(boxes, 0.1, {
+				opacity:1
+			});
+			TweenLite.to(boxes2, 0.1, {
+				opacity:1
 			});
 		}
 
