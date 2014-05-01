@@ -29,6 +29,7 @@ $(document).ready(function(){
 	var boxes2 = $('#question_boxes2');
 	var blocks = $('#blocks');
 	var paused = false;
+	var clouds_spun = false;
 
 		// hide all the images
 
@@ -171,6 +172,17 @@ $(document).ready(function(){
 			});
 		});
 
+		$('#clouds').on('click', function(){
+			TweenLite.to(clouds, 2, {
+				rotation:360
+			});
+//			clouds_spun = true;
+		});
+
+		$('#cloud').on('click', function(){
+			$('#cloud').slideDown('slow', function (){
+			});
+		});
 
 		$('#boo1').click(function(){
 			$('#boo4').fadeIn("slow");
