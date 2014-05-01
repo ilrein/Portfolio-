@@ -134,12 +134,18 @@ body {
 	/*top:250px;*/
 	position:absolute;
 	background:
-	url('boo.png') no-repeat center;
+	url('new_boo_open.png') no-repeat center;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
 }
-.boo4_invert {
+/*.boo4_invert {
 	height:83px;
 	width:83px;
-	/*top:250px;*/
+	top:250px;
 	position:absolute;
 	background:
 	url('boo.png') no-repeat center;
@@ -149,7 +155,7 @@ body {
 	transform: scaleX(-1);
 	filter: FlipH;
 	-ms-filter: "FlipH";
-}
+}*/
 .words {
 	height: 10px;
 	width: 350px;

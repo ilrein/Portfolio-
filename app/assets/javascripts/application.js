@@ -30,19 +30,21 @@ $(document).ready(function(){
 	var blocks = $('#blocks');
 	var clouds = $('#clouds');
 	var paused = false;
-	var clouds_spun = false;
+	var tl = new TimelineLite();
 
 		//mouse follow
 
+		//$(document).on('mousemove', moveBoo);
+
 		function moveBoo(e){
 			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
+			var b4s = boo4.position();
+				//if (b4s)
+				//$('.boo4').mouseover(function(){
+					//console.log(b4s);
+			//$('.boo4').css('background', "url('new_boo_closed.png')");
+		//	});
 		}
-
-		$(document).on('mousemove', moveBoo);
-
-		$('.boo4').mouseover(function(){
-			$('.boo4').toggleClass('boo4_invert');
-		});
 
 		// hide all the images
 
@@ -191,20 +193,14 @@ $(document).ready(function(){
 		$('#clouds').on('click', function(){
 			var selected = $(this);
 			rotate(selected);
-			//var tween = that;
-			// clouds_spun = true;
-			// if (clouds_spun == true) {
-			// 	tween.time(0);
-			// }
 		});
 
 		// utility functions
 
 		function rotate(selected){
-			var that = TweenLite.to(selected, 2, {
+				var that = TweenLite.to(selected, 2, {
 				rotation:360
 			});
-			//return that;
 		}
 
 		// end of utility
