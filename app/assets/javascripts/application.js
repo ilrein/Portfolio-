@@ -30,11 +30,12 @@ $(document).ready(function(){
 	var blocks = $('#blocks');
 	var clouds = $('#clouds');
 	var paused = false;
-	var tl = new TimelineLite();
+	var hide = new TimelineLite();
+	var execute = new TimelineLite();
 
 		//mouse follow
 
-		//$(document).on('mousemove', moveBoo);
+		$(document).on('mousemove', moveBoo);
 
 		function moveBoo(e){
 			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
@@ -48,32 +49,32 @@ $(document).ready(function(){
 
 		// hide all the images
 
-		TweenLite.to(floor, 0.1, {
+		hide.to(floor, 0.1, {
 			opacity:0,
 			onComplete:initFloor
 		});
 
-		TweenLite.to(hills, 0.1, {
+		hide.to(hills, 0.1, {
 			opacity:0
 		});
 
-		TweenLite.to(boxes, 0.1, {
+		hide.to(boxes, 0.1, {
 			opacity:0
 		});
 
-		TweenLite.to(boxes2, 0.1, {
+		hide.to(boxes2, 0.1, {
 			opacity:0
 		});
 
-		TweenLite.to(blocks, 0.1, {
+		hide.to(blocks, 0.1, {
 			left:"1000px"
 		});
 
-		TweenLite.to(clouds, 0.001, {
+		hide.to(clouds, 0.001, {
 			scale:0.01
 		});
 
-		TweenLite.to(cloud, 0.001, {
+		hide.to(cloud, 0.001, {
 			scale:0.01
 		});
 
@@ -184,6 +185,13 @@ $(document).ready(function(){
 
 		// click animations
 
+		$('#blocks').click(function(){
+			execute.to(blocks, 2.5, {
+				scale:1.4
+			});
+			execute.reverse();
+		});
+
 		$('#boo4').click(function(){
 			TweenLite.to(boo4, 4, {
 				opacity:0.25
@@ -193,17 +201,22 @@ $(document).ready(function(){
 		$('#clouds').on('click', function(){
 			var selected = $(this);
 			rotate(selected);
+			rt.time(0);
 		});
 
 		// utility functions
 
+		var rt = new TimelineLite();
+
 		function rotate(selected){
-				var that = TweenLite.to(selected, 2, {
+				rt.to(selected, 2, {
 				rotation:360
 			});
 		}
 
 		// end of utility
+
+		//click functions:
 
 		$('#cloud').on('click', function(){
 			$('#cloud').animate({
@@ -247,10 +260,10 @@ $(document).ready(function(){
 		$(document).keypress(function(event){
 			if (event.which == 112) {
 				if (paused == false) {
-					tween1.pause();
+					hide.pause();
 					paused = true;	
 				} else {
-					tween1.resume();
+					hide.resume();
 					paused = false;	
 				}
 			}
@@ -258,8 +271,7 @@ $(document).ready(function(){
 
 		$(document).keypress(function(event){
 			if (event.which == 114) {
-				tween1.restart();
-				tween2.restart();
+				hide.restart();
 			}
 		});
 		
