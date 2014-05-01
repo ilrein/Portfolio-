@@ -17,6 +17,17 @@ body {
 	background: url('bg_woodfloor.png') center;
 }
 
+#cloud {
+	z-index: 1;
+	height:93px;
+	width:128px;
+	/*display:block;*/
+	bottom:1220px;
+	left:440px;
+	position: relative;
+	background: url('cloud.gif') no-repeat;
+}
+
 #clouds {
 	z-index: 1;
 	height:94px;

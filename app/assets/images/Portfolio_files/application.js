@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+
+
+
 
 $(document).ready(function(){
 
@@ -64,7 +64,7 @@ $(document).ready(function(){
 		//chain the animations!
 
 		function initFloor() {
-			TweenLite.to(floor, 2.3, {
+			TweenLite.to(floor, 1, {
 				opacity:1,
 				onComplete:initHills
 			});
@@ -81,15 +81,16 @@ $(document).ready(function(){
 
 		function initBoxes() {
 			TweenLite.from(boxes, 2, {
-				opacity:0.75,
+				opacity:2,
 				left:"50px",
 				ease: Bounce.easeIn,
 				onComplete:keepBoxes1
 			});
 
 			TweenLite.from(boxes2, 2.4, {
-				opacity:1,
-				rotation:360,
+				opacity:2,
+				top:"-=300px",
+				ease: Back.easeOut,
 				onComplete:keepBoxes2
 			});
 		}
