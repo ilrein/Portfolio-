@@ -5,7 +5,26 @@ html, body {
 
 body {
 	overflow: hidden;
-	background-image: url("bg.png") no-repeat center center fixed;
+	/*background-image: url("bg.png") no-repeat center center fixed;*/
+}
+
+#wooden_floor {
+	height:61px;
+	width:100%;
+	bottom:0;
+	/*left:-10px;*/
+	position: absolute;
+	background: url('bg_woodfloor.png') center;
+}
+
+#smiley_hills {
+	height:258px;
+	width:381px;
+	bottom:258px;
+	left:0px;
+	position: relative;
+	background: url('smiley_hills.gif') no-repeat;
+
 }
 
 #bg {
@@ -92,11 +111,11 @@ body {
 	position: relative;
 	}*/
 
-	.footer {
+/*	.footer {
 		position:absolute;
 		width:100%;
 		bottom:0;
 		height:50px;
 		background-color: #54db59;
 		border-radius: 10%;
-	}
+	}*/

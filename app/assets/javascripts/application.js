@@ -23,14 +23,38 @@ $(document).ready(function(){
 	var boo2 = $("#boo2");
 	$('#boo3').hide();
 	$('#boo4').hide();
-	
-	var playBtn = $('#playBtn');
-	var pauseBtn = $("#pauseBtn");
-	var resumeBtn = $('#resumeBtn');
-	var reverseBtn = $('#reverseBtn');
+	var floor = $('#wooden_floor');
+	var hills = $('#smiley_hills');
 	var paused = false;
 
-		// basic onload animations
+		// hide all the images
+
+		TweenLite.to(floor, 0.1, {
+			opacity:0,
+			onComplete:initFloor
+		});
+
+		TweenLite.to(hills, 0.1, {
+			opacity:0.5
+		});
+
+		//chain the animations!
+
+		function initFloor() {
+			TweenLite.to(floor, 1, {
+				opacity:1,
+				onComplete:initHills
+			});
+		}
+
+		function initHills() {
+			TweenLite.to(hills, 1.5, {
+				opacity:1,
+				right:"5px",
+				ease: Elastic.easeIn
+				//onComplete:initHills
+			});
+		}
 
 		TweenMax.to(s1, 3, {
 			scale:1.2,
