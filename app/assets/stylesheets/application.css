@@ -130,12 +130,21 @@ body {
 }
 
 .boo4 {
-	height:83px;
-	width:83px;
+	height:49px;
+	width:54px;
 	/*top:250px;*/
 	position:absolute;
 	background:
 	url('new_boo_open.png') no-repeat center;
+}
+
+.boo4_closed {
+	height:49px;
+	width:54px;
+	/*top:250px;*/
+	position:absolute;
+	background:
+	url('new_boo_closed.png') no-repeat center;
 }
 /*.boo4_invert {
 	height:83px;
@@ -157,11 +166,11 @@ body {
 	right: 500px;
 	top: 130px;
 	position:absolute;
+
 	text-align: center;
 	z-index: -1;
 	font-family: 'Gochi Hand', cursive;
 	font-size: 400%;
-
 }
 
 #s1, #s2, #s3 {

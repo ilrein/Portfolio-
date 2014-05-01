@@ -33,6 +33,7 @@ $(document).ready(function(){
 	var hide = new TimelineLite();
 	var bb = new TimelineLite();
 	var bb2 = new TimelineLite();
+	var b4s = b4s;
 
 		//mouse follow
 
@@ -41,22 +42,29 @@ $(document).ready(function(){
 
 		function moveBoo(e){
 			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
-			var b4s = boo4.position();
-				if (b4s.left < e.pageX) {
-					$('.boo4').addClass('flipped');
-				} else {
-					$('.boo4').removeClass('flipped');
-				}
-				//$('.boo4').mouseover(function(){
-					//console.log(b4s);
-			//$('.boo4').css('background', "url('new_boo_closed.png')");
-		//	});
+			b4s = boo4.position();
+			if (b4s.left < e.pageX) {
+				$('.boo4').addClass('flipped');
+			} else {
+				$('.boo4').removeClass('flipped');
+			} 
 		}
 
 		function mouseSpot(e) {
-			// var mS = (e.pageX, e.pageY);
-			// console.log(ms);
+
 		}
+
+		// on hover boo
+
+		$('.boo4').on("mouseenter", function(e){
+			if (b4s.left < e.pageX) {
+				$('.boo4').addClass('boo4_closed');
+			}
+		});
+
+		$('.boo4').on("mouseleave", function(){
+			$('.boo4').removeClass('boo4_closed');
+		});
 
 		// hide all the images
 
@@ -220,7 +228,7 @@ $(document).ready(function(){
 		var rt = new TimelineLite();
 
 		function rotate(selected){
-				rt.to(selected, 2, {
+			rt.to(selected, 2, {
 				rotation:360
 			});
 		}
