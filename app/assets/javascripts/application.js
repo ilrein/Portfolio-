@@ -22,7 +22,7 @@ $(document).ready(function(){
 	var boo1 = $("#boo1");
 	var boo2 = $("#boo2");
 	$('#boo3').hide();
-	$('#boo4').hide();
+	var boo4 = $('.boo4');
 	var floor = $('#wooden_floor');
 	var hills = $('#smiley_hills');
 	var boxes = $('#question_boxes');
@@ -31,6 +31,18 @@ $(document).ready(function(){
 	var clouds = $('#clouds');
 	var paused = false;
 	var clouds_spun = false;
+
+		//mouse follow
+
+		function moveBoo(e){
+			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
+		}
+
+		$(document).on('mousemove', moveBoo);
+
+		$('.boo4').mouseover(function(){
+			$('.boo4').toggleClass('boo4_invert');
+		});
 
 		// hide all the images
 
@@ -136,9 +148,8 @@ $(document).ready(function(){
 				opacity:1
 			});
 		}
-		// function refresh() {
-		// 	clouds.restart(0);
-		// }
+
+		// onload animations
 
 		TweenMax.to(s1, 3, {
 			scale:1.2,
@@ -163,13 +174,14 @@ $(document).ready(function(){
 		});
 
 		TweenMax.to(boo4, 1, {
-			left:"300px",
-			repeat:-1,
-			repeatDelay:0.5,
-			yoyo:true
+			// left:"300px",
+			// repeat:-1,
+			// repeatDelay:0.5,
+			// yoyo:true
 		});
 
 		// click animations
+
 		$('#boo4').click(function(){
 			TweenLite.to(boo4, 4, {
 				opacity:0.25
@@ -179,13 +191,23 @@ $(document).ready(function(){
 		$('#clouds').on('click', function(){
 			var selected = $(this);
 			rotate(selected);
+			//var tween = that;
+			// clouds_spun = true;
+			// if (clouds_spun == true) {
+			// 	tween.time(0);
+			// }
 		});
 
+		// utility functions
+
 		function rotate(selected){
-			TweenLite.to(selected, 2, {
+			var that = TweenLite.to(selected, 2, {
 				rotation:360
 			});
+			//return that;
 		}
+
+		// end of utility
 
 		$('#cloud').on('click', function(){
 			$('#cloud').animate({
@@ -194,7 +216,6 @@ $(document).ready(function(){
 		});
 
 		$('#boo1').click(function(){
-			$('#boo4').fadeIn("slow");
 			$('#boo3').fadeIn("slow");
 			TweenLite.to(boo1, 1.6,{
 				top:'+=40px', 
@@ -242,7 +263,7 @@ $(document).ready(function(){
 		$(document).keypress(function(event){
 			if (event.which == 114) {
 				tween1.restart();
-				clouds.restart();
+				tween2.restart();
 			}
 		});
 		

@@ -45,7 +45,7 @@ body {
 	bottom:258px;
 	left:0px;
 	position: relative;
-	background: url('smily_hills.png') no-repeat;
+	background: url('smiley_hills.gif') no-repeat;
 }
 
 #question_boxes {
@@ -128,13 +128,27 @@ body {
 	url('boo.png') no-repeat center;
 }
 
-#boo4 {
-	height:200px;
-	width:200px;
-	top:400px;
+.boo4 {
+	height:83px;
+	width:83px;
+	/*top:250px;*/
 	position:absolute;
 	background:
 	url('boo.png') no-repeat center;
+}
+.boo4_invert {
+	height:83px;
+	width:83px;
+	/*top:250px;*/
+	position:absolute;
+	background:
+	url('boo.png') no-repeat center;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
 }
 .words {
 	height: 10px;
