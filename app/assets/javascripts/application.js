@@ -34,6 +34,9 @@ $(document).ready(function(){
 	var hide = new TimelineLite();
 	var bb = new TimelineLite();
 	var bb2 = new TimelineLite();
+	var bb3 = new TimelineLite();
+	var bb4 = new TimelineLite();
+	var skillz = new TimelineLite();
 	var b4s = b4s;
 
 		//mouse follow
@@ -55,7 +58,18 @@ $(document).ready(function(){
 
 		}
 
-		// on hover boo
+		// helper boo
+
+		$('.boo4').on('click', function(){
+			$.ajax({
+				url: 'skills',
+				type: 'GET',
+				dataType: 'html'
+			}).done(function(data){
+				//$('.container').append(data);
+				
+			});
+		});
 
 		$('.boo4').on("mouseenter", function(e){
 			if (b4s.left < e.pageX) {
@@ -198,7 +212,7 @@ $(document).ready(function(){
 			left:"3000px"
 		});
 
-		tween2 = TweenMax.to(boo2, 9, {
+		tween2 = TweenMax.to(boo2, 6, {
 			left:"-200px",
 			opacity:0,
 			repeat:-1,
@@ -229,17 +243,17 @@ $(document).ready(function(){
 		});
 
 		$('#smiley_hills').on('click', function(){
-			bb.to(hills, 2.5, {
+			bb3.to(hills, 2.5, {
 				scale:1.4
 			});
-			bb.reverse();
+			bb3.reverse();
 		});
 
 		$('#blocks').on('click', function(){
-			bb2.to(blocks, 2.5, {
+			bb4.to(blocks, 2.5, {
 				scale:1.4
 			});
-			bb2.reverse();
+			bb4.reverse();
 		});
 
 		$('#boo4').click(function(){
@@ -325,4 +339,4 @@ $(document).ready(function(){
 			}
 		});
 		
-	});
+});

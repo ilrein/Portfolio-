@@ -1,5 +1,8 @@
 class PagesController < ApplicationController
   def about_me
+    # if request.xhr?
+    #   return render
+    # end
   end
 
   def my_work
