@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+
+
   def about_me
     # if request.xhr?
     #   return render
@@ -12,6 +14,9 @@ class PagesController < ApplicationController
   end
 
   def skills
+    # respond_to do |format|
+    #   format.js {}
+    # end
   end
 
   def contact_me

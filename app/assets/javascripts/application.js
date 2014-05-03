@@ -30,12 +30,14 @@ $(document).ready(function(){
 	var blocks = $('#blocks');
 	var clouds = $('#clouds');
 	var words = $('.words');
+	var bg_hills = $('#bg_hills');
 	var paused = false;
 	var hide = new TimelineLite();
 	var bb = new TimelineLite();
 	var bb2 = new TimelineLite();
 	var bb3 = new TimelineLite();
 	var bb4 = new TimelineLite();
+	var bb5 = new TimelineLite();
 	var skillz = new TimelineLite();
 	var b4s = b4s;
 
@@ -116,6 +118,10 @@ $(document).ready(function(){
 			scale:0.01
 		});
 
+		hide.to(bg_hills, 0.001, {
+			top:"-500px"
+		});
+
 		//chain the animations!
 
 		function initFloor() {
@@ -182,10 +188,17 @@ $(document).ready(function(){
 		function initCloud() {
 			TweenLite.to(cloud, 1, {
 				scale:1,
-				ease: Bounce
+				ease: Bounce,
+				onComplete:initBgHills
 			});
 		}
-
+		function initBgHills() {
+			bb5.to(bg_hills, 1, {
+				top:"-=263px",
+				ease: Bounce.easeOut
+			});
+			//bb5.reverse();
+		}
 		function initBlocks() {
 			TweenLite.to(blocks, 1, {
 				left:"-=1000px",

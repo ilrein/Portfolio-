@@ -16,6 +16,16 @@ body {
 	background: url('bg_woodfloor.png') center;
 }
 
+#bg_hills {
+	z-index: -1;
+	height:204px;
+	width:204px;
+	bottom:763px;
+	left:359px;
+	position: relative;
+	background: url('bg_hills.gif') no-repeat;
+}
+
 #cloud {
 	z-index: 1;
 	height:93px;
@@ -51,7 +61,7 @@ body {
 	z-index: 1;
 	height:57px;
 	width:57px;
-	bottom:500px;
+	bottom:530px;
 	left:500px;
 	position: relative;
 	background: url('questionboxes.png');
