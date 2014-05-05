@@ -1,7 +1,7 @@
 <h1>Pages#my_work</h1>
 <p>Find me in app/views/pages/my_work.html.erb</p>
 <script>
-	$('.sidebar').bigtext();
+	//$('.sidebar').bigtext();
 	tl = new TimelineLite();
 	tl2 = new TimelineLite();
 	tl3 = new TimelineLite();
@@ -9,7 +9,7 @@
 	tl5 = new TimelineLite();
 	
 	$('#home_txt').on("mouseenter", function(){
-		tl.to($(this), 1, {left:"10px"});
+		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl.restart();
 	});
 	$('#home_txt').on("mouseleave", function(){
@@ -17,7 +17,7 @@
 	});
 
 	$('#resume_txt').on("mouseenter", function(){
-		tl2.to($(this), 1, {left:"10px"});
+		tl2.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl2.restart();
 	});
 	$('#resume_txt').on("mouseleave", function(){
@@ -25,7 +25,7 @@
 	});
 
 	$('#mywork_txt').on("mouseenter", function(){
-		tl3.to($(this), 1, {left:"10px"});
+		tl3.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl3.restart();
 	});
 	$('#mywork_txt').on("mouseleave", function(){
@@ -33,7 +33,7 @@
 	});
 
 	$('#skills_txt').on("mouseenter", function(){
-		tl4.to($(this), 1, {left:"10px"});
+		tl4.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl4.restart();
 	});
 	$('#skills_txt').on("mouseleave", function(){
@@ -41,7 +41,7 @@
 	});
 
 	$('#contactme_txt').on("mouseenter", function(){
-		tl5.to($(this), 1, {left:"10px"});
+		tl5.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl5.restart();
 	});
 	$('#contactme_txt').on("mouseleave", function(){
