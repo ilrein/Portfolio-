@@ -1,6 +1,61 @@
 <h1>Pages#my_work</h1>
 <p>Find me in app/views/pages/my_work.html.erb</p>
-<div class="container">
-<div id="wooden_floor"></div>
-<div id="smiley_hills"></div>
-</div>
+<script>
+	$(document).ready(function(){
+		$('.sidebar').bigtext();
+		//var tl = new TimelineLite(),
+
+		home_txt = $('#home_txt'); 
+
+		$('.sidebar').on("mouseenter", function(){
+			var $this = $(this);
+
+			if (!$this.hasClass('animationRunning')) {
+
+				var textAnimateDown = new TimelineLite({
+					paused: true,
+					onComplete: turnGreen
+				});
+
+				$this.addClass('animationRunning');
+				textAnimateDown.to($this.find('#home_txt'), 1, {
+					"margin-top": 100,
+					opacity:0
+				}).play();
+
+				turnGreen($this);
+			}
+
+			$('#home_txt').on("mouseleave", function(){
+				var $this = $(this);
+
+				if($this.hasClass('animationRunning')) {
+					var textAnimateUp = new TimelineLite({
+						paused: true,
+						onComplete: revert
+					});
+
+					textAnimateUpto($this.find('#home_txt'), 1, {
+						"margin-top": 100,
+						opacity:0
+					}).play();
+
+					revert($this);
+				}
+			});
+
+			function turnGreen($this) {
+				$this.addClass('toRed');
+			}
+
+			function revert($this) {
+				$this.removeClass('toRed');
+				$this.removeClass('animationRunning');
+			}
+
+		// function sidebarHover (){
+
+		// }
+	});
+	});
+</script>

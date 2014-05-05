@@ -2,9 +2,6 @@ class PagesController < ApplicationController
 
 
   def about_me
-    # if request.xhr?
-    #   return render
-    # end
   end
 
   def my_work
@@ -20,5 +17,6 @@ class PagesController < ApplicationController
   end
 
   def contact_me
+    
   end
 end
