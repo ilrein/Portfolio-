@@ -9,13 +9,19 @@ body {
 
 .sidebar {
 	float:left;
-	width:300px;
+	width:20%;
 	height:100%;
 	background-color: #dfc7c7;
 	border: solid 1px;
 	border-color: #8d7e7e;
 	text-align: center;
 	font-size: 15px;
+}
+
+.container1 {
+	float:right;
+	width:79%;
+	height:100%;
 }
 
 #home_txt {

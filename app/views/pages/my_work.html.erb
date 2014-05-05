@@ -1,5 +1,7 @@
+<div class="container1">
 <h1>Pages#my_work</h1>
 <p>Find me in app/views/pages/my_work.html.erb</p>
+</div>
 <script>
 	//$('.sidebar').bigtext();
 	tl = new TimelineLite();
@@ -9,12 +11,17 @@
 	tl5 = new TimelineLite();
 	
 	$('#home_txt').on("mouseenter", function(){
-		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#8bacdf"}});
 		tl.restart();
 	});
 	$('#home_txt').on("mouseleave", function(){
 		tl.reverse();
 	});
+	$('#home_txt').on("click", function(){
+
+	});
+
+	//...........................................
 
 	$('#resume_txt').on("mouseenter", function(){
 		tl2.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
