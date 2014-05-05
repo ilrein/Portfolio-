@@ -20,6 +20,18 @@ body {
 #home_txt {
 	position:relative;
 }
+#resume_txt {
+	position:relative;
+}
+#mywork_txt {
+	position:relative;
+}
+#skills_txt {
+	position:relative;
+}
+#contactme_txt {
+	position:relative;
+}
 
 .skills {
 	background-color: red;

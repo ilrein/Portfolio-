@@ -3,12 +3,53 @@
 <script>
 	$('.sidebar').bigtext();
 	tl = new TimelineLite();
+	tl2 = new TimelineLite();
+	tl3 = new TimelineLite();
+	tl4 = new TimelineLite();
+	tl5 = new TimelineLite();
+	
 	$('#home_txt').on("mouseenter", function(){
 		tl.to($(this), 1, {left:"10px"});
 		tl.restart();
 	});
-
 	$('#home_txt').on("mouseleave", function(){
 		tl.reverse();
 	});
+
+	$('#resume_txt').on("mouseenter", function(){
+		tl2.to($(this), 1, {left:"10px"});
+		tl2.restart();
+	});
+	$('#resume_txt').on("mouseleave", function(){
+		tl2.reverse();
+	});
+
+	$('#mywork_txt').on("mouseenter", function(){
+		tl3.to($(this), 1, {left:"10px"});
+		tl3.restart();
+	});
+	$('#mywork_txt').on("mouseleave", function(){
+		tl3.reverse();
+	});
+
+	$('#skills_txt').on("mouseenter", function(){
+		tl4.to($(this), 1, {left:"10px"});
+		tl4.restart();
+	});
+	$('#skills_txt').on("mouseleave", function(){
+		tl4.reverse();
+	});
+
+	$('#contactme_txt').on("mouseenter", function(){
+		tl5.to($(this), 1, {left:"10px"});
+		tl5.restart();
+	});
+	$('#contactme_txt').on("mouseleave", function(){
+		tl5.reverse();
+	});
+
+
+	function textAnimate() {
+		
+	}
 </script>
