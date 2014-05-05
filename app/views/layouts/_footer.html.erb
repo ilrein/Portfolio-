@@ -1,9 +1,77 @@
+<div class="sidebar">
+	<br>
+	<div id="home_txt">Home</div><br>
+	<div id="resume_txt">Resume</div><br>
+	<div id="mywork_txt">My Work</div><br>
+	<div id="skills_txt">Skills</div><br>
+	<div id="contactme_txt">Contact Me</div>
+</div>
 
-	<div class="sidebar">
-		<br>
-		<div id="home_txt">Home</div><br>
-		<div id="resume_txt">Resume</div><br>
-		<div id="mywork_txt">My Work</div><br>
-		<div id="skills_txt">Skills</div><br>
-		<div id="contactme_txt">Contact Me</div>
-	</div>
+
+<script>
+	//$('.sidebar').bigtext();
+	tl = new TimelineLite();
+	tl2 = new TimelineLite();
+	tl3 = new TimelineLite();
+	tl4 = new TimelineLite();
+	tl5 = new TimelineLite();
+	
+	$('#home_txt').on("mouseenter", function(){
+		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#8bacdf"}});
+		tl.restart();
+	});
+	$('#home_txt').on("mouseleave", function(){
+		tl.reverse();
+	});
+	$('#home_txt').on("click", function(){
+		$('container1').append();
+	});
+
+	//...........................................
+
+	$('#resume_txt').on("mouseenter", function(){
+		tl2.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl2.restart();
+	});
+	$('#resume_txt').on("mouseleave", function(){
+		tl2.reverse();
+	});
+
+	$('#mywork_txt').on("mouseenter", function(){
+		tl3.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl3.restart();
+	});
+	$('#mywork_txt').on("mouseleave", function(){
+		tl3.reverse();
+	});
+	//...........................................
+	$('#skills_txt').on("mouseenter", function(){
+		tl4.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl4.restart();
+	});
+	$('#skills_txt').on("mouseleave", function(){
+		tl4.reverse();
+	});
+	$('#skills_txt').on("click", function(){
+		$.ajax({
+			url: 'skills',
+			type: 'GET',
+			dataType: 'html'
+		}).done(function(data){
+			$('.container1').empty().append(data);
+		});
+	});
+	//...........................................
+	$('#contactme_txt').on("mouseenter", function(){
+		tl5.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl5.restart();
+	});
+	$('#contactme_txt').on("mouseleave", function(){
+		tl5.reverse();
+	});
+
+
+	function textAnimate() {
+		
+	}
+</script>
