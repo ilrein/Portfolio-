@@ -37,12 +37,24 @@
 		tl2.reverse();
 	});
 
+	//   .......................................
+
 	$('#mywork_txt').on("mouseenter", function(){
 		tl3.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
 		tl3.restart();
 	});
 	$('#mywork_txt').on("mouseleave", function(){
 		tl3.reverse();
+	});
+	$('#mywork_txt').on("click", function(){
+		$.ajax({
+			url: 'skills',
+			type: 'GET',
+			dataType: 'html'
+		}).done(function(data){
+			$('.container1').empty().load('my_work .mywork');
+		});
+		tl4.reverse();
 	});
 	//...........................................
 	$('#skills_txt').on("mouseenter", function(){
@@ -58,7 +70,7 @@
 			type: 'GET',
 			dataType: 'html'
 		}).done(function(data){
-			$('.container1').empty().append(data);
+			$('.container1').empty().load('skills .skills');
 		});
 		tl4.reverse();
 	});
