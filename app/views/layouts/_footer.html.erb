@@ -7,7 +7,6 @@
 	<div id="contactme_txt">Contact Me</div>
 </div>
 
-
 <script>
 	//$('.sidebar').bigtext();
 	tl = new TimelineLite();
@@ -15,7 +14,15 @@
 	tl3 = new TimelineLite();
 	tl4 = new TimelineLite();
 	tl5 = new TimelineLite();
-	
+
+	//cursor changes
+	$('#home_txt').css('cursor', 'pointer');
+	$('#resume_txt').css('cursor', 'pointer');
+	$('#mywork_txt').css('cursor', 'pointer');
+	$('#skills_txt').css('cursor', 'pointer');
+	$('#contactme_txt').css('cursor', 'pointer');
+
+	//mouse hover animations
 	$('#home_txt').on("mouseenter", function(){
 		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#8bacdf"}});
 		tl.restart();
@@ -24,7 +31,14 @@
 		tl.reverse();
 	});
 	$('#home_txt').on("click", function(){
-		$('container1').append();
+		$.ajax({
+			//url: 'skills',
+			type: 'GET',
+			dataType: 'html'
+		}).done(function(data){
+			$('.container1').empty().load('about_me .container');
+		});
+		tl.reverse();
 	});
 
 	//...........................................
@@ -35,6 +49,16 @@
 	});
 	$('#resume_txt').on("mouseleave", function(){
 		tl2.reverse();
+	});
+	$('#resume_txt').on("click", function(){
+		$.ajax({
+			//url: 'resume',
+			type: 'GET',
+			dataType: 'html'
+		}).done(function(data){
+			$('.container1').empty().load('resume .resume');
+		});
+		tl.reverse();
 	});
 
 	//   .......................................
@@ -48,13 +72,13 @@
 	});
 	$('#mywork_txt').on("click", function(){
 		$.ajax({
-			url: 'skills',
+			//url: 'skills',
 			type: 'GET',
 			dataType: 'html'
 		}).done(function(data){
 			$('.container1').empty().load('my_work .mywork');
 		});
-		tl4.reverse();
+		tl3.reverse();
 	});
 	//...........................................
 	$('#skills_txt').on("mouseenter", function(){
@@ -66,7 +90,7 @@
 	});
 	$('#skills_txt').on("click", function(){
 		$.ajax({
-			url: 'skills',
+			//url: 'skills',
 			type: 'GET',
 			dataType: 'html'
 		}).done(function(data){
@@ -80,6 +104,16 @@
 		tl5.restart();
 	});
 	$('#contactme_txt').on("mouseleave", function(){
+		tl5.reverse();
+	});
+	$('#contactme_txt').on("click", function(){
+		$.ajax({
+			//url: 'contact_me',
+			type: 'GET',
+			dataType: 'html'
+		}).done(function(data){
+			$('.container1').empty().load('contact_me .contactme');
+		});
 		tl5.reverse();
 	});
 
