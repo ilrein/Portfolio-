@@ -8,6 +8,8 @@
 </div>
 
 <script>
+
+
 	//$('.sidebar').bigtext();
 	tl = new TimelineLite();
 	tl2 = new TimelineLite();
@@ -31,15 +33,7 @@
 		tl.reverse();
 	});
 	$('#home_txt').on("click", function(){
-		$.ajax({
-			//url: 'skills',
-			type: 'GET',
-			dataType: 'html'
-		}).done(function(data){
-			$('.container1').empty().load('about_me .container');
-		});
-		tl.reverse();
-		animateBackground();
+	
 	});
 
 	//...........................................
@@ -52,14 +46,6 @@
 		tl2.reverse();
 	});
 	$('#resume_txt').on("click", function(){
-		$.ajax({
-			//url: 'resume',
-			type: 'GET',
-			dataType: 'html'
-		}).done(function(data){
-			$('.container1').empty().load('resume .resume');
-		});
-		tl.reverse();
 
 
 	});
@@ -74,14 +60,7 @@
 		tl3.reverse();
 	});
 	$('#mywork_txt').on("click", function(){
-		$.ajax({
-			//url: 'skills',
-			type: 'GET',
-			dataType: 'html'
-		}).done(function(data){
-			$('.container1').empty().load('my_work .mywork');
-		});
-		tl3.reverse();
+
 	});
 	//...........................................
 	$('#skills_txt').on("mouseenter", function(){
@@ -92,14 +71,7 @@
 		tl4.reverse();
 	});
 	$('#skills_txt').on("click", function(){
-		$.ajax({
-			//url: 'skills',
-			type: 'GET',
-			dataType: 'html'
-		}).done(function(data){
-			$('.container1').empty().load('skills .skills');
-		});
-		tl4.reverse();
+		
 	});
 	//...........................................
 	$('#contactme_txt').on("mouseenter", function(){
@@ -110,13 +82,6 @@
 		tl5.reverse();
 	});
 	$('#contactme_txt').on("click", function(){
-		$.ajax({
-			//url: 'contact_me',
-			type: 'GET',
-			dataType: 'html'
-		}).done(function(data){
-			$('.container1').empty().load('contact_me .contactme');
-		});
-		tl5.reverse();
+
 	});
 </script>

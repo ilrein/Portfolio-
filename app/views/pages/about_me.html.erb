@@ -34,9 +34,9 @@
 		$(document).on('mousemove', mouseSpot);
 
 		function moveBoo(e){
-			TweenLite.to(boo4, 4, {css:{left: e.pageX, top: e.pageY}});
+			TweenLite.to(boo4, 4, {css:{left: (e.pageX - 270), top: e.pageY}});
 			b4s = boo4.position();
-			if (b4s.left < e.pageX) {
+			if (b4s.left < (e.pageX- 270)) {
 				$('.boo4').addClass('flipped');
 			} else {
 				$('.boo4').removeClass('flipped');
