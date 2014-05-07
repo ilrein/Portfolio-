@@ -62,7 +62,6 @@ body {
 	z-index: -1;
 	height:204px;
 	width:204px;
-	bottom:763px;
 	left:359px;
 	position: relative;
 	background: url('bg_hills.gif') no-repeat;
@@ -83,8 +82,8 @@ body {
 	height:94px;
 	width:194px;
 	display:block;
-	bottom:1020px;
-	left:320px;
+	bottom:1220px;
+	left:280px;
 	position: relative;
 	background: url('clouds.gif') no-repeat;
 }
@@ -110,18 +109,18 @@ body {
 }
 #question_boxes2 {
 	z-index: 1;
-	height:57px;
+	height:80px;
 	width:114px;
 	bottom:700px;
 	left:680px;
 	position: relative;
-	background: url('questionboxes.png');
+	background: url('questionboxes.png')no-repeat;
 }
 #blocks {
 	z-index: 1;
 	height:350px;
 	width:271px;
-	bottom:675px;
+	bottom:695px;
 	float:right;
 	position: relative;
 	background: url('blocks.gif') no-repeat;
