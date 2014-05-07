@@ -1,10 +1,16 @@
 html, body {
 	width: 100%;
 	height: 100%;
+	cursor: url("glove.png"), auto;
 }
 
 body {
 	overflow: hidden;
+}
+.container1 {
+	float:right;
+	width:78%;
+	height:100%;
 }
 
 .sidebar {
@@ -12,34 +18,36 @@ body {
 	float:left;
 	width:20%;
 	height:100%;
-	background-color: #dfc7c7;
+	background-color: #94A8BF;
 	border: solid 1px;
-	border-color: #8d7e7e;
+	border-color: #313840;
 	text-align: center;
-	font-size: 15px;
+	font-size: 22px;
+	overflow: visible;
+	font-family: 'Gochi Hand', cursive;
 }
-
-.container1 {
-	float:right;
-	width:78%;
-	height:100%;
-	
+a:-webkit-any-link {
+	text-decoration: none;
+	color: #BAD3F0 !important;
+	cursor: url('gloveq.png'), auto;
 }
 
 #home_txt {
+	z-index: 1;
 	position:relative;
 }
 #resume_txt {
+	z-index: 1;
 	position:relative;
 }
 #mywork_txt {
+	z-index: 1;
 	position:relative;
 }
 #skills_txt {
+	z-index: 1;
 	position:relative;
-}
-#contactme_txt {
-	position:relative;
+	height:50px;
 }
 
 .skills {
@@ -148,6 +156,7 @@ body {
 }
 
 #boo1 {
+	z-index: 0;
 	height:200px;
 	width:200px;
 	position: absolute;
@@ -203,8 +212,6 @@ body {
 	left: 45%;
 	top: 30%;
 	position:fixed;
-
-
 	text-align: center;
 	z-index: -1;
 	font-family: 'Gochi Hand', cursive;

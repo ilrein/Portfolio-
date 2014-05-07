@@ -1,45 +1,33 @@
 <div class="sidebar">
 	<br>
-	<div id="home_txt">Home</div><br>
-	<div id="resume_txt">Resume</div><br>
-	<div id="mywork_txt">My Work</div><br>
-	<div id="skills_txt">Skills</div><br>
-	<div id="contactme_txt">Contact Me</div>
+	<div id="home_txt"><%= link_to 'Home', root_path %></div><br>
+	<div id="resume_txt"><%= link_to 'Resume', pages_resume_path %></div><br>
+	<div id="mywork_txt"><%= link_to 'My Work', pages_my_work_path %></div><br>
+	<div id="skills_txt"><%= link_to 'Skills', pages_skills_path %></div><br>
 </div>
-
 <script>
-
-
 	//$('.sidebar').bigtext();
 	tl = new TimelineLite();
 	tl2 = new TimelineLite();
 	tl3 = new TimelineLite();
 	tl4 = new TimelineLite();
-	tl5 = new TimelineLite();
-
-	//cursor changes
-	$('#home_txt').css('cursor', 'pointer');
-	$('#resume_txt').css('cursor', 'pointer');
-	$('#mywork_txt').css('cursor', 'pointer');
-	$('#skills_txt').css('cursor', 'pointer');
-	$('#contactme_txt').css('cursor', 'pointer');
 
 	//mouse hover animations
 	$('#home_txt').on("mouseenter", function(){
-		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#8bacdf"}});
+		tl.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#EEF7FF"}});
 		tl.restart();
 	});
 	$('#home_txt').on("mouseleave", function(){
 		tl.reverse();
 	});
 	$('#home_txt').on("click", function(){
-	
+		
 	});
 
 	//...........................................
 
 	$('#resume_txt').on("mouseenter", function(){
-		tl2.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl2.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#EEF7FF"}});
 		tl2.restart();
 	});
 	$('#resume_txt').on("mouseleave", function(){
@@ -47,13 +35,12 @@
 	});
 	$('#resume_txt').on("click", function(){
 
-
 	});
 
 	//   .......................................
 
 	$('#mywork_txt').on("mouseenter", function(){
-		tl3.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl3.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#EEF7FF"}});
 		tl3.restart();
 	});
 	$('#mywork_txt').on("mouseleave", function(){
@@ -64,24 +51,14 @@
 	});
 	//...........................................
 	$('#skills_txt').on("mouseenter", function(){
-		tl4.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
+		tl4.to($(this), 0.2, {css:{top:"5px", fontSize:"40px", color:"#EEF7FF"}});
 		tl4.restart();
 	});
 	$('#skills_txt').on("mouseleave", function(){
 		tl4.reverse();
 	});
 	$('#skills_txt').on("click", function(){
-		
-	});
-	//...........................................
-	$('#contactme_txt').on("mouseenter", function(){
-		tl5.to($(this), 0.2, {css:{top:"5px", fontSize:"40px"}});
-		tl5.restart();
-	});
-	$('#contactme_txt').on("mouseleave", function(){
-		tl5.reverse();
-	});
-	$('#contactme_txt').on("click", function(){
 
 	});
+
 </script>
