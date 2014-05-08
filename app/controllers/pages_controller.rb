@@ -9,12 +9,10 @@ class PagesController < ApplicationController
   end
 
   def skills
-    # respond_to do |format|
-    #   format.js {}
-    # end
+
   end
 
   def contact_me
-    
+
   end
 end
