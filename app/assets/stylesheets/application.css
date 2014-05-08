@@ -4,13 +4,8 @@ html, body {
 	padding: 0;
 	margin: 0;
 }
-
-body {
-	/*overflow: hidden;*/
-}
-
 .container1 {
-	overflow:hidden;
+	
 	float:right;
 	width:80%;
 	height:100%;
@@ -143,6 +138,7 @@ a:hover {
 }
 
 .container {
+	overflow:hidden;
 	position: relative;
 	width: 100%;
 	height: 100%;
