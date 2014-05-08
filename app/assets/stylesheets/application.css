@@ -8,6 +8,10 @@ html, body {
 body {
 	overflow: hidden;
 }
+
+.arc path {
+	stroke: #fff;
+}
 .container1 {
 	float:right;
 	width:78%;

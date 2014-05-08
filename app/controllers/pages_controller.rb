@@ -6,6 +6,7 @@ class PagesController < ApplicationController
   end
 
   def resume
+
   end
 
   def skills
