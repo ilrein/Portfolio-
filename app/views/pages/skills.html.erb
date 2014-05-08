@@ -1,23 +1,23 @@
 <div class="skills">
-My Knowledge:<br>
-<div id="chart-2" style="height: 300px;"></div>
-    <script>
-      new Chartkick.PieChart("chart-2", [["HTML",20],["CSS",20],["JavaScript",30],["Ruby/Rails",30]], {"colors": ["#007148", "#60A859", "#9BDA6A", "#C7F774"]});
-    </script>
+	My Knowledge:<br>
+	<div id="chart-3" style="height: 300px;"></div>
 </div>
 
 <div id="mastery">
-Path to Mastery:<br>
-<div id="chart-3" style="height: 300px;"></div>
-	<script>
-	
-    </script>
+	Ambitions to learn:<br>
+	<table>
+	<td><div id="html5"><%= image_tag('html5.png') %></div></td>
+	<td><div id="CSS3"><%= image_tag('CSS3.png') %></div></td>
+	</table>
 </div>
 
 <div class="wakingtime">
-How I spend my waking time (hours):<br>
-<div id="chart-1" style="height: 300px;"></div>
-    <script>
-      new Chartkick.PieChart("chart-1", [["Coding",7],["Eating",2],["Exercise",1],["Commuting",1.5],["Leisure",4]], {"colors": ["#BF495E", "#41A693", "#F2EC9B", "#D9CF48", "#D9583B"]});
-    </script>
+	How I spend my waking time (hours):<br>
+	<div id="chart-1" style="height: 300px;"></div>
 </div>
+
+<script>
+	new Chartkick.PieChart("chart-1", [["Coding",7],["Eating",2],["Exercise",1],["Commuting",1.5],["Leisure",4]], {"colors": ["#BF495E", "#41A693", "#F2EC9B", "#D9CF48", "#D9583B"]});
+
+	 new Chartkick.BarChart("chart-3", [{name: "Hours Practised", data: [["HTML",150],["CSS",200],["JavaScript",250],["Ruby/Rails",250]]}, {name: "Remaining Hours to Mastery", data: [["HTML",5000],["CSS",5000],["JavaScript",5000],["Ruby/Rails",5000]]}], {'colors': ['#d54d72', 'pink'], max: 5000, stacked: true});
+</script>
