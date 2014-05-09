@@ -71,6 +71,7 @@ html, body {
 	height:48%;
 	float:left;
 	width:99.5%;
+	overflow:hidden;
 }
 h5 {
 	margin-top: 2%;
@@ -106,6 +107,7 @@ h5 {
 	margin-right: 2%;
 }
 .mywork {
+
 	overflow:hidden;
 	background-color: #0A1322;
 	height:100%;
@@ -129,8 +131,8 @@ h5 {
 	border-color: white;
 	text-align: center;
 	font-size: 22px;
-	overflow: visible;
 	font-family: 'Audiowide', cursive;
+	overflow:hidden;
 }
 a:-webkit-any-link {
 	text-decoration: none;
