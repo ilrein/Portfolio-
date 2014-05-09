@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'projects/index'
-
+  get 'projects/show_mario'
+  get 'projects/show_ttt'
   #get 'projects/:id'
 
   root 'pages#my_work' 

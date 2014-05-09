@@ -1,9 +1,8 @@
 class ProjectsController < ApplicationController
-  def index
-  	@projects = Project.all
+  def index	
   end
-
-  def show
-  	@project = Project.find[:id]
+  def show_mario
+  end
+  def show_ttt
   end
 end
