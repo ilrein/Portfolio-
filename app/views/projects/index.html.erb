@@ -1,10 +1,16 @@
 <div class="mywork">
 	<div id="interlude4">My Work</div>
 	
+	<% @projects.each do |x| %>
 	
-	<%= link_to '#' do %>
-	<div id="first_cell"><div class="circleBase"></div></div>
+	
+	
+	<div id="first_cell"><%= x.name %><%= x.id %>
+	<div class="circleBase"></div>
+	</div>
+	
 	<% end %>
+	
 	<div id="second_cell"><div class="circleBase"></div></div>
 
 </div>
