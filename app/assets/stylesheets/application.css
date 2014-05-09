@@ -58,14 +58,14 @@ h5 {
 	font-size: 150%;
 }
 .topright{
-	position: relative;
+	position: absolute;
 	background-color: #F6FFFB;
 	border-top-right-radius:2%;
 	border:solid 2px;
 	border-color: #2B448C;
 	height:50%;
-	float:right;
-	width:48.06%;
+	width:26%;
+	right:13.75%;
 }
 #ttt_project {
 	border-radius: 2%;
