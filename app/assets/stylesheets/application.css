@@ -30,8 +30,22 @@ a:-webkit-any-link {
 	color:#3844df;
 	/*cursor: url('gloveq.png'), auto;*/
 }
+a {
+	text-decoration: none;
+}
 a:hover {
 	color:#4d00df;
+}
+
+.mastery table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#interlude, #interlude2, #interlude3 {
+	text-align:center;
+	font-size: 40px;
+	font-family: 'Indie Flower', cursive;
 }
 
 #home_txt {
