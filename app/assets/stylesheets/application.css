@@ -18,9 +18,11 @@ html, body {
 	border:solid 5px;
 	border-color: #37375B;
 	background-color: #3A6683;
+	font-family: 'Righteous', cursive;
 }
 .project_description {
 	padding-left: 12px;
+	padding-right: 12px;
 	margin-top: -5%;
 }
 /*mario*/
@@ -67,7 +69,7 @@ html, body {
 	width:99.5%;
 }
 h5 {
-	margin-top: 8%;
+	margin-top: 2%;
 	text-align: center;
 	font-size: 150%;
 }
