@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'projects/index'
+
+  get 'projects/show'
+
   root 'pages#my_work' 
   get 'pages/about_me', :path => "about_me"
 

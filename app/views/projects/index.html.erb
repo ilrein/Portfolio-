@@ -1,0 +1,24 @@
+<div class="mywork">
+	<div id="interlude4">My Work</div>
+	
+	
+	<%= link_to '#' do %>
+	<div id="first_cell"><div class="circleBase"></div></div>
+	<% end %>
+	<div id="second_cell"><div class="circleBase"></div></div>
+
+</div>
+<script>
+	$(document).ready(function(){
+		t = new TimelineLite();
+		$('#interlude4').mouseenter(function(){
+			t.to($(this), 0.7, {scale:1.2});
+			t.restart();
+		});
+		$('#interlude4').mouseleave(function(){
+			t.reverse();
+		});
+	});
+</script>
+
+

@@ -3,6 +3,8 @@ class PagesController < ApplicationController
   end
 
   def my_work
+    
+
   end
 
   def resume
