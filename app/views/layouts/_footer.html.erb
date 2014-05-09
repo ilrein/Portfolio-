@@ -4,6 +4,22 @@
 	<div id="resume_txt"><%= link_to 'Resume', pages_resume_path, class: 'sidelink' %></div><br>
 	<div id="mywork_txt"><%= link_to 'My Work', projects_index_path, class: 'sidelink' %></div><br>
 	<div id="skills_txt"><%= link_to 'Skills', pages_skills_path, class: 'sidelink' %></div><br>
+	<div class="iconz">
+		<%= link_to 'https://www.facebook.com/ilia.reingold?ref=tn_tnmn' do %>
+		<%= image_tag('fbook.png', :id => 'fbook') %>
+		<% end %>
+		<%= link_to 'https://github.com/ilrein' do %>
+		<%= image_tag('ghub.png', :id => 'ghub') %>
+		<% end %>
+	</div>
+	<div class="iconz">
+		<%= link_to '#' do %>
+		<%= image_tag('twitter.png', :id => 'twitter') %>
+		<% end %>
+		<%= link_to '#' do %>
+		<%= image_tag('linkedin.png', :id => 'linkedin') %>
+		<% end %>
+	</div>
 </div>
 <script>
 	//$('.sidebar').bigtext();
@@ -11,6 +27,11 @@
 	tl2 = new TimelineLite();
 	tl3 = new TimelineLite();
 	tl4 = new TimelineLite();
+
+	tl5 = new TimelineLite();
+	tl6 = new TimelineLite();
+	tl7 = new TimelineLite();
+	tl8 = new TimelineLite();
 
 	//mouse hover animations
 	$('#home_txt').on("mouseenter", function(){
@@ -45,5 +66,37 @@
 	});
 	$('#skills_txt').on("mouseleave", function(){
 		tl4.reverse();
+	});
+	//...........................................
+	$('#fbook').on("mouseenter", function(){
+		tl5.to($(this), 0.2, {rotation:360});
+		tl5.restart();
+	});
+	$('#fbook').on("mouseleave", function(){
+		tl5.reverse();
+	});
+	//...........................................
+	$('#ghub').on("mouseenter", function(){
+		tl6.to($(this), 0.2, {rotation:360});
+		tl6.restart();
+	});
+	$('#ghub').on("mouseleave", function(){
+		tl6.reverse();
+	});
+	//...........................................
+	$('#twitter').on("mouseenter", function(){
+		tl7.to($(this), 0.2, {rotation:360});
+		tl7.restart();
+	});
+	$('#twitter').on("mouseleave", function(){
+		tl7.reverse();
+	});
+	//...........................................
+	$('#linkedin').on("mouseenter", function(){
+		tl8.to($(this), 0.2, {rotation:360});
+		tl8.restart();
+	});
+	$('#linkedin').on("mouseleave", function(){
+		tl8.reverse();
 	});
 </script>

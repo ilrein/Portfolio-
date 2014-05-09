@@ -351,4 +351,6 @@ a:-webkit-any-link {
 	position: relative;
 }
 
-
+#linkedin, #fbook, #twitter, #ghub {
+	position: relative;
+}
