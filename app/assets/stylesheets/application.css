@@ -16,6 +16,7 @@ html, body {
 }
 
 #mario_world_project {
+	border-radius: 2%;
 	border:1px solid;
 	margin-right: 60%;
 	height:400px;
@@ -23,12 +24,16 @@ html, body {
 }
 
 #ttt_project {
+	border-radius: 2%;
 	border:1px solid;
+	margin-top: 10%;
 	margin-right: 20%;
 	height:400px;
 	width: 650px;
 }
 #crowdfunder_project {
+	border-radius: 2%;
+	margin-top: 10%;
 	border:1px solid;
 	margin-right: 20%;
 	height:400px;
@@ -259,7 +264,7 @@ a:hover {
 	position:fixed;
 	text-align: center;
 	z-index: -1;
-	font-family: 'Gochi Hand', cursive;
+	font-family: 'Permanent Marker', cursive;
 	font-size: 400%;
 }
 
