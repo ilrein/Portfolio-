@@ -2,13 +2,16 @@
 	<div id="interlude4">My Work</div>
 
 	<div class="project_section">
-		<%= link_to projects_show_mario_path do %>
+		
 		<div class id="mario_world_project">
-			<div class id="mario_world_project_topleft"></div>
-			<div class id="mario_world_project_topright"></div>
-			<div class id="mario_world_project_bottom"></div>
+			<%= link_to projects_show_mario_path do %>
+			<div class id="mario_world_project_topleft"></div><% end %>
+			<div class="topright">
+				<h5>Description</h5>
+			</div>
+			<div class="project_bottom"></div>
 		</div>
-		<% end %>
+		
 		<%= link_to projects_show_ttt_path do %>
 		<div class id="ttt_project">test</div><% end %>
 		<div class id="crowdfunder_project">test</div>
@@ -21,12 +24,20 @@
 <script>
 	$(document).ready(function(){
 		t = new TimelineLite();
+		t2 = new TimelineLite();
 		$('#interlude4').mouseenter(function(){
 			t.to($(this), 0.7, {scale:1.2});
 			t.restart();
 		});
 		$('#interlude4').mouseleave(function(){
 			t.reverse();
+		});
+		$('#mario_world_project_topleft').mouseenter(function(){
+			t2.to($(this), 0.7, {css:{backgroundColor:"blue"}});
+			t2.restart();
+		});
+		$('#mario_world_project_topleft').mouseleave(function(){
+			t2.reverse();
 		});
 	});
 </script>

@@ -25,25 +25,19 @@ html, body {
 	width: auto;
 	margin-right: 2%;
 }
-#mario_world_project_topright{
-	position: relative;
-	background-color: #b5baff;
-	border-top-right-radius:2%;
-	border:solid 2px;
-	border-color: #2B448C;
-	height:50%;
-	float:right;
-	width:48%;
-}
+
 #mario_world_project_topleft{
 	position: relative;
 	background: url('boo.png') no-repeat center;
+	background-color: white;
 	height:50%;
 	float:left;
 	width:50.6%;
 	border:solid 2px;
+	border-top-left-radius:2%;
 }
-#mario_world_project_bottom {
+/*mario*/
+.project_bottom {
 	position: relative;
 	background-color: purple;
 	border-bottom-right-radius:2%;
@@ -54,7 +48,21 @@ html, body {
 	float:left;
 	width:99.3%;
 }
-/*mario*/
+h5 {
+	margin-top: 1%;
+	text-align: center;
+	font-size: 150%;
+}
+.topright{
+	position: relative;
+	background-color: #b5baff;
+	border-top-right-radius:2%;
+	border:solid 2px;
+	border-color: #2B448C;
+	height:50%;
+	float:right;
+	width:48.06%;
+}
 #ttt_project {
 	border-radius: 2%;
 	border:solid 2px;
