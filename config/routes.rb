@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'projects/show_ttt'
   #get 'projects/:id'
 
-  root 'pages#my_work' 
+  root 'pages#about_me' 
   get 'pages/about_me', :path => "about_me"
 
   get 'pages/my_work', :path => "my_work"
