@@ -4,8 +4,40 @@ html, body {
 	padding: 0;
 	margin: 0;
 }
+
+/*Projects styling*/
+
+.project_section {
+	padding: 10%;
+	margin-left: 5%;
+	margin-right: 5%;
+	border-radius: 2%;
+	border:1px solid;
+}
+
+#mario_world_project {
+	border:1px solid;
+	margin-right: 60%;
+	height:400px;
+	width: 650px;
+}
+
+#ttt_project {
+	border:1px solid;
+	margin-right: 20%;
+	height:400px;
+	width: 650px;
+}
+#crowdfunder_project {
+	border:1px solid;
+	margin-right: 20%;
+	height:400px;
+	width: 650px;
+}
+
+/*end of projects styling*/
+
 .container1 {
-	
 	float:right;
 	width:80%;
 	height:100%;
