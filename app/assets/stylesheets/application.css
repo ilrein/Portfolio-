@@ -12,20 +12,53 @@ html, body {
 	margin-left: 5%;
 	margin-right: 5%;
 	border-radius: 2%;
-	border:1px solid;
+	border:solid 5px;
+	border-color: #2B448C;
+	background-color: #5AB8F3;
 }
-
+/*mario*/
 #mario_world_project {
 	border-radius: 2%;
-	border:1px solid;
+	border:solid 2px;
+	border-color: #2B448C;
 	height:400px;
 	width: auto;
 	margin-right: 2%;
 }
-
+#mario_world_project_topright{
+	position: relative;
+	background-color: #b5baff;
+	border-top-right-radius:2%;
+	border:solid 2px;
+	border-color: #2B448C;
+	height:50%;
+	float:right;
+	width:48%;
+}
+#mario_world_project_topleft{
+	position: relative;
+	background: url('boo.png') no-repeat center;
+	height:50%;
+	float:left;
+	width:50.6%;
+	border:solid 2px;
+}
+#mario_world_project_bottom {
+	position: relative;
+	background-color: purple;
+	border-bottom-right-radius:2%;
+	border-bottom-left-radius:2%;
+	border:solid 2px;
+	border-color: #2B448C;
+	height:48%;
+	float:left;
+	width:99.3%;
+}
+/*mario*/
 #ttt_project {
 	border-radius: 2%;
-	border:1px solid;
+	border:solid 2px;
+	border-color: #2B448C;
 	margin-top: 10%;
 	height:400px;
 	width: auto;
@@ -34,13 +67,15 @@ html, body {
 #crowdfunder_project {
 	border-radius: 2%;
 	margin-top: 10%;
-	border:1px solid;
+	border:solid 2px;
+	border-color: #2B448C;
 	height:400px;
 	width: auto;
 	margin-right: 2%;
 }
 .mywork {
 	overflow:hidden;
+	background-color: #2A558C;
 }
 /*end of projects styling*/
 
