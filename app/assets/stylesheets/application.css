@@ -18,7 +18,7 @@ html, body {
 	border:solid 5px;
 	border-color: #37375B;
 	background-color: #3A6683;
-	font-family: 'Righteous', cursive;
+	font-family: 'Kreon', serif;
 }
 .project_description {
 	padding-left: 12px;
@@ -131,7 +131,7 @@ h5 {
 	border-color: white;
 	text-align: center;
 	font-size: 22px;
-	font-family: 'Audiowide', cursive;
+	font-family: 'Acme', sans-serif;
 	overflow:hidden;
 }
 a:-webkit-any-link {
@@ -155,14 +155,14 @@ a:-webkit-any-link {
 	z-index: 10;
 	text-align:center;
 	font-size: 40px;
-	font-family: 'Audiowide', cursive;
+	font-family: 'Acme', sans-serif;
 	display:inherit;
 }
  #interlude4 {
  	z-index: 10;
 	text-align:center;
 	font-size: 40px;
-	font-family: 'Audiowide', cursive;
+	font-family: cursive;
 	display:inherit;
 	color: white;
  }
