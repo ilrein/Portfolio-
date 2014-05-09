@@ -39,10 +39,12 @@ html, body {
 	position: relative;
 	background: url('boo.png') no-repeat center;
 	background-color: #F6FFFB;
-	height:50%;
+	height:52%;
 	float:left;
-	width:50.6%;
-	border:solid 2px;
+	width:53%;
+	border:solid 1px;
+	border-color: black;
+	border-bottom: 4px;
 	border-top-left-radius:2%;
 }
 #ttt_project_top_left{
@@ -51,8 +53,10 @@ html, body {
 	background-color: #F6FFFB;
 	height:50%;
 	float:left;
-	width:50.6%;
-	border:solid 2px;
+	width:53%;
+	border:solid 1px;
+	border-color: black;
+	border-bottom: 4px;
 	border-top-left-radius:2%;
 }
 
@@ -79,7 +83,7 @@ h5 {
 	border-top-right-radius:2%;
 	border:solid 2px;
 	border-color: #2B448C;
-	height:26.2%;
+	height:300px;
 	width:25.8%;
 	right:13.7%;
 }
