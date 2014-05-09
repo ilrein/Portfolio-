@@ -8,7 +8,10 @@ html, body {
 /*Projects styling*/
 
 .project_section {
-	padding: 10%;
+	height:100%;
+	padding-left: 10%;
+	padding-top: 10%;
+	padding-right: 10%;
 	margin-left: 5%;
 	margin-right: 5%;
 	border-radius: 2%;
@@ -99,6 +102,7 @@ h5 {
 .mywork {
 	overflow:hidden;
 	background-color: #0A1322;
+	height:100%;
 }
 /*end of projects styling*/
 
