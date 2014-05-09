@@ -18,28 +18,30 @@ html, body {
 #mario_world_project {
 	border-radius: 2%;
 	border:1px solid;
-	margin-right: 60%;
 	height:400px;
-	width: 650px;
+	width: auto;
+	margin-right: 2%;
 }
 
 #ttt_project {
 	border-radius: 2%;
 	border:1px solid;
 	margin-top: 10%;
-	margin-right: 20%;
 	height:400px;
-	width: 650px;
+	width: auto;
+	margin-right: 2%;
 }
 #crowdfunder_project {
 	border-radius: 2%;
 	margin-top: 10%;
 	border:1px solid;
-	margin-right: 20%;
 	height:400px;
-	width: 650px;
+	width: auto;
+	margin-right: 2%;
 }
-
+.mywork {
+	overflow:hidden;
+}
 /*end of projects styling*/
 
 .container1 {
