@@ -356,9 +356,9 @@ a:-webkit-any-link {
 }
 
 #work_details_nexttier{
-	
+
 	margin-top: 4%;
-	
+
 }
 .resume {
 	font-family: 'Kreon', serif;
@@ -391,7 +391,7 @@ h6 {
 }
 #stadia_role{
 	margin-top: 2%;
-	margin-left: 5%;
+	margin-left: 1%;
 	float:left;
 }
 #humber1 {
@@ -411,6 +411,11 @@ h6 {
 	margin-left: -5%;
 	position:absolute;
 	float:left;
+	z-index: -1;
+}
+#midlow_work_details {
+	margin-top: 2%;
+	position:absolute;
 	z-index: -1;
 }
 .inner_details {
