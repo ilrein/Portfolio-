@@ -48,33 +48,6 @@
 			<!-- <div class id="final_project">test</div> -->
 		</div>
 	</div>
-	<script>
-		$(document).ready(function(){
-			t = new TimelineLite();
-			t2 = new TimelineLite();
-			t3 = new TimelineLite();
-			$('#interlude4').mouseenter(function(){
-				t.to($(this), 0.7, {scale:1.2});
-				t.restart();
-			});
-			$('#interlude4').mouseleave(function(){
-				t.reverse();
-			});
-			$('#mario_world_project_topleft').mouseenter(function(){
-				t2.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
-				t2.restart();
-			});
-			$('#mario_world_project_topleft').mouseleave(function(){
-				t2.reverse();
-			});
-			$('#ttt_project_top_left').mouseenter(function(){
-				t3.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
-				t3.restart();
-			});
-			$('#ttt_project_top_left').mouseleave(function(){
-				t3.reverse();
-			});
-		});
-	</script>
+
 
 
