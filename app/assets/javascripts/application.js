@@ -18,6 +18,12 @@ $(document).ready(function(){
   tll = new TimelineLite();
   tll2 = new TimelineLite();
   tll3 = new TimelineLite();
+  tll4 = new TimelineLite();
+
+  TweenLite.to($('#hello'), 2.1, {
+        rotation:360
+      });
+
   $('#interlude4').mouseenter(function(){
     tll.to($(this), 0.7, {scale:1.2});
     tll.restart();
