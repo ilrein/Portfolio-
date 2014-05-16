@@ -1,6 +1,37 @@
 <div class='resume'>
-	<div id="interlude">Resume</div>
-	
+	<div id="interlude">Resume::Ilia Reingold</div>
+	<div id="notes">
+		<h3 id="cg">Career Goals:</h3>
+		<div class="inner_details">
+			My goal is to begin a career as a junior web developer. I want to design and develop amazing and beautiful web apps.
+		</div>
+		<div class="inner_details">
+			I want to work in a learning orientated environment, and blossom from a junior level developer.
+		</div>
+	</div>
+	<div id="experience">
+		<h3 id='pwork'>Previous Work Experience:</h3>
+		<div class="work_details">
+			<div class='upper_work_details'>
+				<%= image_tag('stadia.png', id: 'stadia') %> 
+				<h6 id='stadia_role'>Accounting/Operations Assistant @ Stadia Industries</h6>
+			</div><br>
+			<div class='mid_work_details'>
+				<ul>
+					<li>Aided CFO with time consuming routine accounting tasks</li>
+					<li class='indented'>Learned the fundamentals of practical accounting</li>
+					<li>Helped Director of Operations manage daily work flow, closing customers, issuing POs, creating high quality reports for clients</li>
+					<li class='indented'>Observed the art of management/leadership running a team of 20 people</li>
+					<li class='indented'>Watched crisp professionalism dealing with difficult clients</li>
+				</ul>
+				<div id="work_details_nexttier">
+					<%= image_tag('humber.jpg', id: 'humber') %> 
+					<h6 id='humber_role'>English Tutor @ Humber College</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </div>
 
 <script>
@@ -8,6 +39,8 @@
 		t = new TimelineLite();
 		t2 = new TimelineLite();
 		t3 = new TimelineLite();
+		t4 = new TimelineLite();
+
 		$('#interlude').mouseenter(function(){
 			t.to($(this), 0.7, {css:{color:'#0a00db'}});
 			t.restart();
@@ -15,5 +48,94 @@
 		$('#interlude').mouseleave(function(){
 			t.reverse();
 		});
+		$('#cg').mouseenter(function(){
+			t2.to($(this), 0.7, {left:'50px'});
+			t2.restart();
+		});
+		$('#cg').mouseleave(function(){
+			t2.reverse();
+		});
+		$('#pwork').mouseenter(function(){
+			t3.to($(this), 0.7, {left:'50px'});
+			t3.restart();
+		});
+		$('#pwork').mouseleave(function(){
+			t3.reverse();
+		});
+		$('#stadia').mouseenter(function(){
+			t4.to($(this), 0.7, {scale:1.4});
+			t4.restart();
+		});
+		$('#stadia').mouseleave(function(){
+			t4.reverse();
+		});
 	});
 </script>
+
+<style>
+	#work_details_nexttier{
+		position: relative;
+		
+	}
+	.resume {
+		font-family: 'Kreon', serif;
+	}
+	h3 {
+		padding-left: 5%;
+		text-decoration: underline;
+	}
+	h6 {
+		margin-top: -2%;
+		left: 40%;
+		font-size: 103%;
+		position: absolute;
+	}
+	#cg, #pwork {
+		position: relative;
+	}
+	.work_details {
+		margin-left:10%;
+		margin-right:10%;
+		margin-top: 2%;
+		padding:1%;
+	}
+	.indented {
+		margin-left: 3%;
+		color:#606266;
+	}
+	#stadia {
+		float:left;
+	}
+	#stadia_role{
+		margin-top: 2%;
+		margin-left: 5%;
+		float:left;
+	}
+	#humber {
+		margin-left: 5%;
+		float:left;
+	}
+	#humber_role{
+		margin-top: 1%;
+		margin-left: -8%;
+		float:left;
+	}
+	.upper_work_details {
+		z-index: 5;
+	}
+	.mid_work_details {
+		margin-top: 2%;
+		margin-left: -5%;
+		position:absolute;
+		float:left;
+		z-index: -1;
+	}
+	.inner_details {
+		margin-left:10%;
+		margin-right:10%;
+		margin-top: 2%;
+		padding:1%;
+		color:white;
+		background-color:black;
+	}
+</style>
