@@ -142,7 +142,7 @@ a:-webkit-any-link {
 	text-decoration: none;
 	color:white;
 }
- .sidelink:hover {
+.sidelink:hover {
 	color:#7D7D7C;
 }
 
@@ -158,14 +158,14 @@ a:-webkit-any-link {
 	font-family: 'Acme', sans-serif;
 	display:inherit;
 }
- #interlude4 {
- 	z-index: 10;
+#interlude4 {
+	z-index: 10;
 	text-align:center;
 	font-size: 40px;
 	font-family: cursive;
 	display:inherit;
 	color: white;
- }
+}
 
 #home_txt {
 	z-index: 1;
@@ -353,4 +353,71 @@ a:-webkit-any-link {
 
 #linkedin, #fbook, #twitter, #ghub {
 	position: relative;
+}
+
+#work_details_nexttier{
+	
+	margin-top: 4%;
+	
+}
+.resume {
+	font-family: 'Kreon', serif;
+}
+h3 {
+	padding-left: 5%;
+	text-decoration: underline;
+}
+h6 {
+	margin-top: -2%;
+	left: 40%;
+	font-size: 103%;
+	position: absolute;
+}
+#cg, #pwork {
+	position: relative;
+}
+.work_details {
+	margin-left:10%;
+	margin-right:10%;
+	margin-top: 2%;
+	padding:1%;
+}
+.indented {
+	margin-left: 3%;
+	color:#606266;
+}
+#stadia {
+	float:left;
+}
+#stadia_role{
+	margin-top: 2%;
+	margin-left: 5%;
+	float:left;
+}
+#humber1 {
+	margin-left: 5%;
+	float:left;
+}
+#humber_role{
+	margin-top: 1%;
+	margin-left: -8%;
+	float:left;
+}
+.upper_work_details {
+	z-index: 5;
+}
+.mid_work_details {
+	margin-top: 2%;
+	margin-left: -5%;
+	position:absolute;
+	float:left;
+	z-index: -1;
+}
+.inner_details {
+	margin-left:10%;
+	margin-right:10%;
+	margin-top: 2%;
+	padding:1%;
+	color:white;
+	background-color:black;
 }
