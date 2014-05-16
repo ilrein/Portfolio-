@@ -1,14 +1,18 @@
 html, body {
 	width: 100%;
-	height: 100%;
 	padding: 0;
 	margin: 0;
+	height: 100%;
+}
+
+.mywork {
+	overflow: hidden;
 }
 
 /*Projects styling*/
 
 .project_section {
-	height:100%;
+	height:110%;
 	padding-left: 10%;
 	padding-top: 10%;
 	padding-right: 10%;
@@ -107,7 +111,6 @@ h5 {
 	margin-right: 2%;
 }
 .mywork {
-
 	overflow:hidden;
 	background-color: #0A1322;
 	height:100%;
