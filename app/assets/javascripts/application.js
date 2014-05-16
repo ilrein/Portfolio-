@@ -15,12 +15,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-
- 
-
-  //
-
-  //////////////////////////////////////
   tll = new TimelineLite();
   tll2 = new TimelineLite();
   tll3 = new TimelineLite();
@@ -39,17 +33,15 @@ $(document).ready(function(){
     tll2.reverse();
   });
   $('#ttt_project_top_left').mouseenter(function(){
-    tll3.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
-    tll3.restart();
+    Tweenlite.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
+    //tll3.restart();
+    //tll3.reverse();
   });
-  $('#ttt_project_top_left').mouseleave(function(){
-    tll3.reverse();
-  });
-  //////////////////////////////////////
 
   tl = new TimelineLite();
   tl2 = new TimelineLite();
-  tl3 = new TimelineLite()
+  tl3 = new TimelineLite();
+  tl4 = new TimelineLite();
 
   $('#cg').mouseenter(function(){
     tl2.to($(this), 0.7, {left:'50px'});
@@ -65,6 +57,14 @@ $(document).ready(function(){
   $('#pwork').mouseleave(function(){
     tl3.reverse();
   });
+  $('#interlude').mouseenter(function(){
+    tl4.to($(this), 2, {rotation: 360});
+    tl4.restart();
+  });
+  $('#interlude').mouseleave(function(){
+    tl4.reverse();
+  });
+ 
 
   ///////////////////////////////////////
  
