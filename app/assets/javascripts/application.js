@@ -44,31 +44,31 @@ $(document).ready(function(){
     //tll3.reverse();
   });
 
-  tl = new TimelineLite();
-  tl2 = new TimelineLite();
-  tl3 = new TimelineLite();
-  tl4 = new TimelineLite();
+  txl = new TimelineLite();
+  txl2 = new TimelineLite();
+  txl3 = new TimelineLite();
+  txl4 = new TimelineLite();
 
   $('#cg').mouseenter(function(){
-    tl2.to($(this), 0.7, {left:'50px'});
-    tl2.restart();
+    txl2.to($(this), 0.7, {left:'50px'});
+    txl2.restart();
   });
   $('#cg').mouseleave(function(){
-    tl2.reverse();
+    txl2.reverse();
   });
   $('#pwork').mouseenter(function(){
-    tl3.to($(this), 0.7, {left:'50px'});
-    tl3.restart();
+    txl3.to($(this), 0.7, {left:'50px'});
+    txl3.restart();
   });
   $('#pwork').mouseleave(function(){
-    tl3.reverse();
+    txl3.reverse();
   });
   $('#interlude').mouseenter(function(){
-    tl4.to($(this), 2, {rotation: 360});
-    tl4.restart();
+    txl4.to($(this), 2, {rotation: 360});
+    txl4.restart();
   });
   $('#interlude').mouseleave(function(){
-    tl4.reverse();
+    txl4.reverse();
   });
  
 
