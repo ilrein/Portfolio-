@@ -1,6 +1,0 @@
-@font-face {
-  font-family: 'Gochi Hand';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Gochi Hand'), local('GochiHand-Regular'), url(http://themes.googleusercontent.com/static/fonts/gochihand/v5/ZZzTGmufF-Wq8IS3fkpBu73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
-}

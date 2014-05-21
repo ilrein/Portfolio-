@@ -39,9 +39,13 @@ $(document).ready(function(){
     tll2.reverse();
   });
   $('#ttt_project_top_left').mouseenter(function(){
-    Tweenlite.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
-    //tll3.restart();
+    tll3.to($(this), 0.7, {css:{backgroundColor:"#3A6683"}});
+    tll3.restart();
     //tll3.reverse();
+  });
+
+  $('#ttt_project_top_left').mouseleave(function(){
+    tll3.reverse();
   });
 
   txl = new TimelineLite();
