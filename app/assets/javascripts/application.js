@@ -47,36 +47,4 @@ $(document).ready(function(){
   $('#ttt_project_top_left').mouseleave(function(){
     tll3.reverse();
   });
-
-  txl = new TimelineLite();
-  txl2 = new TimelineLite();
-  txl3 = new TimelineLite();
-  txl4 = new TimelineLite();
-
-  $('#cg').mouseenter(function(){
-    txl2.to($(this), 0.7, {left:'50px'});
-    txl2.restart();
   });
-  $('#cg').mouseleave(function(){
-    txl2.reverse();
-  });
-  $('#pwork').mouseenter(function(){
-    txl3.to($(this), 0.7, {left:'50px'});
-    txl3.restart();
-  });
-  $('#pwork').mouseleave(function(){
-    txl3.reverse();
-  });
-  $('#interlude').mouseenter(function(){
-    txl4.to($(this), 2, {rotation: 360});
-    txl4.restart();
-  });
-  $('#interlude').mouseleave(function(){
-    txl4.reverse();
-  });
- 
-
-  ///////////////////////////////////////
- 
-
-});
